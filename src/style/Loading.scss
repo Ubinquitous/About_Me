@@ -1,0 +1,166 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 1;
+        height: 0;
+        transform: matrix(0.707107 -0.707107 -0.707107 -0.707107 22.0255 44.1542);
+    }
+
+    to {
+        opacity: 1;
+        height: 22.3884;
+        transform: matrix(0.707107 -0.707107 -0.707107 -0.707107 22.0255 44.1542);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        height: 22.3884;
+        transform: matrix(0.707107 -0.707107 -0.707107 -0.707107 22.0255 44.1542);
+    }
+
+    to {
+        height: 0;
+        transform: matrix(0.707107 -0.707107 -0.707107 -0.707107 22.0255 44.1542);
+    }
+}
+
+@keyframes transDeg {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes scatter {
+    to {
+        letter-spacing: 8px;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes movePage {
+    to {
+        left: 0px;
+    }
+}
+
+.loading-wrap {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        margin-top: 12px;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+}
+
+.black-left-bottom {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 0s, 2.4s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease, ease;
+}
+
+.gray-left-bottom {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 0.2s, 2.2s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease, ease;
+}
+
+.black-left-top {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 0.4s, 2.4s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease;
+}
+
+.gray-left-top {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 0.6s, 2.2s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease;
+}
+
+.black-right-top {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 0.9s, 2.4s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease;
+}
+
+.gray-right-top {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 1.1s, 2.2s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease, ease;
+}
+
+.black-right-bottom {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 1.3s, 2.4s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease, ease;
+}
+
+.gray-right-bottom {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp, fadeInDown;
+    animation-delay: 1.5s, 2.2s;
+    animation-duration: 0.35s, 0.5s;
+    animation-timing-function: ease, ease;
+}
+
+.svg-wrap {
+    animation-fill-mode: forwards;
+    animation-name: transDeg;
+    animation-delay: 1.8s;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+}
+
+.title-text {
+    animation-fill-mode: forwards;
+    animation-name: scatter, fadeOut;
+    animation-delay: 1.8s, 2.1s;
+    animation-duration: 0.6s, 0.4s;
+    animation-timing-function: ease, ease;
+}
+
+.move-page {
+    // width: 100vw;
+    // height: 100vh;
+    // background-color: black;
+    // position: absolute;
+    // left: 2000px;
+    // animation-fill-mode: forwards;
+    // animation-name: movePage;
+    // animation-delay: 2.8s;
+    // animation-duration: 0.6s;
+    // animation-timing-function: ease-in-out;
+}
