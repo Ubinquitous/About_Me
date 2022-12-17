@@ -1,0 +1,17 @@
+@mixin multipleAnimation($opacity, $in-name, $out-name, $in-delay, $out-delay, $in-duration, $out-duration) {
+    opacity: $opacity;
+    animation-fill-mode: forwards;
+    animation-name: $in-name, $out-name;
+    animation-delay: $in-delay, $out-delay;
+    animation-duration: $in-duration, $out-duration;
+    animation-timing-function: ease, ease;
+}
+
+@mixin singleAnimation($opacity, $name, $delay, $duration) {
+    opacity: $opacity;
+    animation-fill-mode: forwards;
+    animation-name: $name;
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-timing-function: ease;
+}
