@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cute Mushroom
+* source:	https://sketchfab.com/3d-models/cute-mushroom-330bdafb6e404276a477ac6c1c37b382
+* author:	annhatsady (https://sketchfab.com/annhatsady)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cute Mushroom" (https://sketchfab.com/3d-models/cute-mushroom-330bdafb6e404276a477ac6c1c37b382) by annhatsady (https://sketchfab.com/annhatsady) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
