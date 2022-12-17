@@ -1,7 +1,27 @@
+@import './Animation.scss';
+
+@keyframes changeOpacity {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movePage {
+    to {
+        left: 0px;
+    }
+}
+
 .home-wrap {
+    @include singleAnimation(1, movePage, 3s, 1.4s);
+
     width: 100vw;
     height: 100vh;
+    position: absolute;
     display: flex;
+    left: 2000px;
     justify-content: center;
     align-items: center;
+    color: white;
+    background-color: black;
 }
