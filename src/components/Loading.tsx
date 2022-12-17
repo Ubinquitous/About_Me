@@ -1,5 +1,5 @@
-import React from 'react';
-import '../style/Loading.scss';
+import React from 'react'
+import '@/style/Loading.scss'
 
 const Loading = () => {
     const msgArray = ['@ubin._ing', 'github.com/Ubinquitous', 'ubinquitous1@gmail.com']
@@ -20,7 +20,7 @@ const Loading = () => {
             <span className='title-text'>{randomMsg}</span>
             <div className='move-page' />
         </div>
-    );
-};
+    )
+}
 
-export default Loading;
+export default Loading
