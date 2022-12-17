@@ -1,3 +1,5 @@
+@import './Animation.scss';
+
 @keyframes MoveIn {
     from {
         opacity: 1;
@@ -43,12 +45,6 @@
     }
 }
 
-@keyframes movePage {
-    to {
-        left: 0px;
-    }
-}
-
 @keyframes displayNone {
     to {
         width: 0;
@@ -57,36 +53,18 @@
     }
 }
 
-@mixin multipleAnimation($opacity, $in-name, $out-name, $in-delay, $out-delay, $in-duration, $out-duration) {
-    opacity: $opacity;
-    animation-fill-mode: forwards;
-    animation-name: $in-name, $out-name;
-    animation-delay: $in-delay, $out-delay;
-    animation-duration: $in-duration, $out-duration;
-    animation-timing-function: ease, ease;
-}
-
-@mixin singleAnimation($opacity, $name, $delay, $duration) {
-    opacity: $opacity;
-    animation-fill-mode: forwards;
-    animation-name: $name;
-    animation-delay: $delay;
-    animation-duration: $duration;
-    animation-timing-function: ease;
-}
-
 .loading-wrap {
-    @include singleAnimation(1, displayNone, 3s, 0.35s);
+    @include singleAnimation(1, displayNone, 2.9s, 0s);
 
-    width: 100%;
-    height: 200px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     .title-text {
-        @include multipleAnimation(1, scatterText, fadeOut, 1.8s, 2.1s, 0.6s, 0.4s);
+        @include multipleAnimation(1, scatterText, fadeOut, 1.8s, 2.1s, 0.6s, 0.5s);
 
         margin-top: 12px;
         font-weight: 700;
@@ -129,17 +107,4 @@
             @include multipleAnimation(0, MoveIn, MoveOut, 1.5s, 2.2s, 0.35s, 0.5s);
         }
     }
-}
-
-.move-page {
-    // width: 100vw;
-    // height: 100vh;
-    // background-color: black;
-    // position: absolute;
-    // left: 2000px;
-    // animation-fill-mode: forwards;
-    // animation-name: movePage;
-    // animation-delay: 2.8s;
-    // animation-duration: 0.6s;
-    // animation-timing-function: ease-in-out;
 }
