@@ -1,4 +1,10 @@
 @import './Animation.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: Gallery;
+    src: url('../fonts/GalleryModern.otf');
+}
 
 @keyframes changeOpacity {
     to {
@@ -8,20 +14,87 @@
 
 @keyframes movePage {
     to {
+        width: 100vw;
         left: 0px;
     }
 }
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.wrap {
+    height: 100vh;
+}
+
 .home-wrap {
-    @include singleAnimation(1, movePage, 3s, 1.4s);
+    @include singleAnimation(1, movePage, 0s, 1.4s);
 
     width: 100vw;
-    height: 100vh;
     position: absolute;
     display: flex;
     left: 2000px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     color: white;
     background-color: black;
+
+    .title-wrap {
+        width: 100vw;
+        height: 120vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+        }
+    }
+
+    .about-wrap {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F0F0F0;
+        color: black;
+        line-height: 0px;
+        font-size: 170px;
+        line-height: 120px;
+
+        .sub-text {
+            font-size: 22px;
+            margin-bottom: auto;
+        }
+
+        .main-about-text {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+
+            .title-b {
+                font-size: 150px;
+                margin-bottom: 30px;
+                margin-left: -100px;
+            }
+
+            .title-d {
+                margin-top: 50px;
+                font-size: 14px;
+                margin-left: auto;
+                line-height: normal;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.gallery-font {
+    font-family: Gallery;
 }
