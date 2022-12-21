@@ -44,7 +44,7 @@
 
     .title-wrap {
         width: 100vw;
-        height: 120vh;
+        height: 110vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,6 +52,10 @@
         span {
             font-family: 'Montserrat', sans-serif;
             font-size: 32px;
+
+            &::selection {
+                background-color: transparent;
+            }
         }
     }
 
@@ -77,6 +81,13 @@
             justify-content: center;
             align-content: center;
             flex-direction: column;
+
+            span {
+                &::selection {
+                    color: red;
+                    background-color: transparent;
+                }
+            }
 
             .title-b {
                 font-size: 150px;

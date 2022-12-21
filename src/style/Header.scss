@@ -1,0 +1,21 @@
+@import './Home.scss';
+@import './Animation.scss';
+
+.header-wrap {
+    @include singleAnimation(1, movePage, 0s, 1.45s);
+
+    color: white;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    left: 2000px;
+
+    span {
+        margin-left: 26px;
+    }
+}
