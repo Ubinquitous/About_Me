@@ -56,9 +56,11 @@
 .loading-wrap {
     @include singleAnimation(1, displayNone, 2.9s, 0s);
 
+    position: fixed;
     width: 100vw;
     height: 100vh;
     display: flex;
+    background-color: #F0F0F0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
