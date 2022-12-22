@@ -44,7 +44,7 @@
 
     .title-wrap {
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -84,7 +84,7 @@
 
             span {
                 &::selection {
-                    color: red;
+                    color: #ffe65a;
                     background-color: transparent;
                 }
             }
@@ -98,14 +98,75 @@
             .title-d {
                 margin-top: 50px;
                 font-size: 14px;
-                margin-left: auto;
+                margin-right: auto;
                 line-height: normal;
-                text-align: right;
+                text-align: left;
             }
         }
+
+        .snake-wrap {
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            right: 15vw;
+            position: absolute;
+        }
+    }
+}
+
+.snake-wrap,
+.snake__snake,
+.snake__snake-container,
+path,
+text,
+textpath {
+    &::selection {
+        background-color: transparent;
     }
 }
 
 .gallery-font {
     font-family: Gallery;
+}
+
+.snake__snake-container {
+    width: 200px;
+    height: 290.4035087719px;
+    margin: 0 auto;
+
+
+    .snake__snake {
+        z-index: 1;
+        width: 200px;
+        height: 50vh;
+        display: block;
+        top: -20px;
+        text-rendering: optimizeSpeed;
+        shape-rendering: optimizeSpeed;
+
+        path {
+            stroke: transparent;
+            fill: none;
+            transform: translateY(1px);
+            shape-rendering: optimizeSpeed;
+        }
+
+        text {
+            font-size: 4px;
+            font-family: Austin, serif;
+            font-style: normal;
+            pointer-events: none;
+            text-rendering: optimizeSpeed;
+            shape-rendering: optimizeSpeed;
+
+            textPath {
+                white-space: inherit;
+            }
+        }
+    }
+}
+
+.smklnl {
+    flex-direction: column;
+
 }
