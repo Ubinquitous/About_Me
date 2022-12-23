@@ -59,11 +59,18 @@
         }
     }
 
+    .move-page {
+        @include singleAnimation(1, movePage, 0s, 2.2s);
+    }
+
     .about-wrap {
         width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
+        position: absolute;
+        top: 0px;
+        left: 2000px;
         align-items: center;
         background-color: #F0F0F0;
         color: black;
@@ -98,9 +105,9 @@
             .title-d {
                 margin-top: 50px;
                 font-size: 14px;
-                margin-right: auto;
+                margin-left: auto;
                 line-height: normal;
-                text-align: left;
+                text-align: right;
             }
         }
 
@@ -119,7 +126,7 @@
 .snake__snake-container,
 path,
 text,
-textpath {
+textPath {
     &::selection {
         background-color: transparent;
     }
@@ -130,17 +137,15 @@ textpath {
 }
 
 .snake__snake-container {
-    width: 200px;
-    height: 290.4035087719px;
-    margin: 0 auto;
 
+    width: 420px;
+    height: 480.4035087719px;
 
     .snake__snake {
         z-index: 1;
-        width: 200px;
-        height: 50vh;
+        width: 400px;
+        height: 560px;
         display: block;
-        top: -20px;
         text-rendering: optimizeSpeed;
         shape-rendering: optimizeSpeed;
 
