@@ -54,7 +54,7 @@
 }
 
 .loading-wrap {
-    @include singleAnimation(1, displayNone, 2.9s, 0s);
+    @include singleAnimation(1, displayNone, 4.8s, 0s);
 
     position: fixed;
     width: 100vw;

@@ -2,8 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @font-face {
-    font-family: Gallery;
-    src: url('../fonts/GalleryModern.otf');
+    font-family: RocGrotesk-wide;
+    src: url('../fonts/Fontspring-DEMO-rocgroteskwide-regular.otf');
+}
+
+@font-face {
+    font-family: RocGrotesk-basic;
+    src: url('../fonts/Fontspring-DEMO-rocgrotesk-regular.otf');
+}
+
+@font-face {
+    font-family: RocGrotesk-wide-bold;
+    src: url('../fonts/Fontspring-DEMO-rocgroteskwide-bold.otf');
 }
 
 @keyframes changeOpacity {
@@ -30,7 +40,7 @@
 }
 
 .home-wrap {
-    @include singleAnimation(1, movePage, 0s, 1.4s);
+    @include singleAnimation(1, movePage, 0s, 2s);
 
     width: 100vw;
     position: absolute;
@@ -48,19 +58,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
 
         span {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
+            font-family: 'RocGrotesk-wide', sans-serif;
 
             &::selection {
                 background-color: transparent;
             }
         }
-    }
 
-    .move-page {
-        @include singleAnimation(1, movePage, 0s, 2.2s);
+        .title {
+            font-size: 86px;
+        }
+
+        .sub-title {
+            margin-top: 22px;
+            font-size: 20px;
+            opacity: 0;
+            @include singleAnimation(0, fadeIn, 2s, 1.6s);
+        }
     }
 
     .about-wrap {
@@ -68,110 +85,89 @@
         height: 100vh;
         display: flex;
         justify-content: center;
-        position: absolute;
-        top: 0px;
-        left: 2000px;
         align-items: center;
-        background-color: #F0F0F0;
-        color: black;
-        line-height: 0px;
-        font-size: 170px;
-        line-height: 120px;
+        flex-direction: column;
 
-        .sub-text {
-            font-size: 22px;
-            margin-bottom: auto;
+        .about-title {
+            font-family: 'RocGrotesk-wide-bold', sans-serif;
+            font-size: 62px;
+            line-height: 76px;
         }
 
-        .main-about-text {
+        .description {
+            margin-top: 20px;
+            font-family: 'RocGrotesk-basic', sans-serif;
+            font-size: 22px;
+        }
+
+        .main {
+            margin-right: auto;
+            margin-left: 10vw;
+        }
+
+        .about-span-box {
+            margin-left: auto;
+            margin-right: 10vw;
             display: flex;
             justify-content: center;
-            align-content: center;
+            align-items: center;
             flex-direction: column;
 
-            span {
-                &::selection {
-                    color: #ffe65a;
-                    background-color: transparent;
-                }
-            }
-
-            .title-b {
-                font-size: 150px;
-                margin-bottom: 30px;
-                margin-left: -100px;
-            }
-
-            .title-d {
-                margin-top: 50px;
-                font-size: 14px;
-                margin-left: auto;
-                line-height: normal;
-                text-align: right;
+            .sub {
+                margin-right: auto;
             }
         }
+    }
 
-        .snake-wrap {
-            display: flex;
-            flex-direction: column;
-            z-index: 2;
-            right: 15vw;
+    .circle-wrap {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .circle-title {
+            font-family: 'RocGrotesk-wide-bold';
+            font-size: 62px;
             position: absolute;
-        }
-    }
-}
-
-.snake-wrap,
-.snake__snake,
-.snake__snake-container,
-path,
-text,
-textPath {
-    &::selection {
-        background-color: transparent;
-    }
-}
-
-.gallery-font {
-    font-family: Gallery;
-}
-
-.snake__snake-container {
-
-    width: 420px;
-    height: 480.4035087719px;
-
-    .snake__snake {
-        z-index: 1;
-        width: 400px;
-        height: 560px;
-        display: block;
-        text-rendering: optimizeSpeed;
-        shape-rendering: optimizeSpeed;
-
-        path {
-            stroke: transparent;
-            fill: none;
-            transform: translateY(1px);
-            shape-rendering: optimizeSpeed;
+            right: 60vw;
+            margin-top: -30vw;
+            line-height: 76px;
         }
 
-        text {
-            font-size: 4px;
-            font-family: Austin, serif;
-            font-style: normal;
-            pointer-events: none;
-            text-rendering: optimizeSpeed;
-            shape-rendering: optimizeSpeed;
+        .circle {
+            display: flex;
+            width: fit-content;
+            height: 40vw;
 
-            textPath {
-                white-space: inherit;
+            .main-circle {
+                width: 40vw;
+                height: 40vw;
+                border-radius: 999px;
+                border: 2px solid white;
+                position: absolute;
+            }
+
+            .sub-circle {
+                width: 30vw;
+                height: 30vw;
+                border-radius: 999px;
+                border: 2px solid white;
+                margin-left: 35vw;
+                z-index: 1;
+                background-color: black;
             }
         }
+
+        .circle-subtitle {
+            text-align: right;
+            font-family: 'RocGrotesk-wide-bold';
+            font-size: 62px;
+            line-height: 76px;
+            position: absolute;
+            left: 70vw;
+            margin-top: 28vw;
+        }
     }
-}
-
-.smklnl {
-    flex-direction: column;
-
 }
