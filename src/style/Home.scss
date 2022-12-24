@@ -134,6 +134,7 @@
             right: 60vw;
             margin-top: -30vw;
             line-height: 76px;
+            z-index: 2;
         }
 
         .circle {
@@ -144,16 +145,16 @@
             .main-circle {
                 width: 40vw;
                 height: 40vw;
-                border-radius: 999px;
-                border: 2px solid white;
+                border-radius: 20vw;
                 position: absolute;
+                background: none 0% 0% / contain;
+                isolation: isolate;
             }
 
             .sub-circle {
                 width: 30vw;
                 height: 30vw;
                 border-radius: 999px;
-                border: 2px solid white;
                 margin-left: 35vw;
                 z-index: 1;
                 background-color: black;
@@ -170,4 +171,18 @@
             margin-top: 28vw;
         }
     }
+
+    .test {
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+canvas {
+    border: 3px solid white;
+    border-radius: 999px;
 }
