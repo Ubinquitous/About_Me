@@ -1,13 +1,21 @@
 import Loading from '../components/Loading'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import '@/style/Home.scss'
-import ThreeJS from '../components/ThreeJS';
 import Aos from 'aos';
 import "aos/dist/aos.css";
+import renderSubBalls from '../function/renderSubBalls';
+import renderMainBalls from '../function/renderMainBalls';
 
 const Home = () => {
+    const mainboxRef = useRef(null);
+    const maincanvasRef = useRef(null);
+    const subboxRef = useRef(null);
+    const subcanvasRef = useRef(null);
+
     const [scrollY, setScrollY] = React.useState(0);
     const [isLoad, setIsLoad] = React.useState(false);
+    const [isUsedRenderBallFuncion, setIsUsedRenderBallFuncion] = React.useState(false);
+
     setTimeout(() => {
         setIsLoad(true);
     }, 2800);
@@ -24,6 +32,12 @@ const Home = () => {
             window.removeEventListener('scroll', handleScroll)
         }
     }, []);
+
+    if (scrollY >= 1400 && !isUsedRenderBallFuncion) {
+        renderSubBalls(subboxRef, subcanvasRef);
+        renderMainBalls(mainboxRef, maincanvasRef);
+        setIsUsedRenderBallFuncion(true)
+    }
 
     useEffect(() => {
         Aos.init();
@@ -74,14 +88,16 @@ const Home = () => {
                         <div className='circle-wrap'>
                             <span className='circle-title'>TECH SKILL</span>
                             <div className='circle'>
-                                <div className='sub-circle'>
-
+                                <div className='sub-circle' ref={subboxRef}>
+                                    <canvas ref={subcanvasRef} className='sub-canvas' />
                                 </div>
-                                <div className='main-circle'>
-
+                                <div className='main-circle' ref={mainboxRef}>
+                                    <canvas ref={maincanvasRef} className='main-canvas' />
                                 </div>
                             </div>
                             <span className='circle-subtitle'>SUB<br />TECHS</span>
+                        </div>
+                        <div className='test'>
                         </div>
                         {/* <div className='card-wrap'></div>
                         <div className='contect-wrap'></div> */}
