@@ -2,7 +2,7 @@
 @import './Animation.scss';
 
 .header-wrap {
-    @include singleAnimation(1, movePage, 0s, 1.45s);
+    @include singleAnimation(1, movePage, 0s, 2.1s);
 
     color: white;
     width: 100vw;
