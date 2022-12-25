@@ -13,6 +13,7 @@ import AllCard from '../components/Card/AllCard';
 import MeCard from '../components/Card/MeCard';
 import ExCard from '../components/Card/ExCard';
 import renderSubBalls from '../function/renderSubBalls';
+import ContactMe from '../components/ContactMe';
 
 const Home = () => {
     const mainboxRef = React.useRef(null);
@@ -191,7 +192,7 @@ const Home = () => {
                                     {isClickALL ? <AllCard /> : isClickME ? <MeCard /> : <ExCard />}
                                 </div> : ''}
                         </div>
-                        {/*<div className='contect-wrap'></div> */}
+                        <ContactMe />
                     </div>
                 </> : ''}
         </div>

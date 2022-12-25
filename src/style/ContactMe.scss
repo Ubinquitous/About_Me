@@ -1,0 +1,130 @@
+@import './Animation.scss';
+
+@keyframes textHoverInstagram {
+    to {
+        width: 200px;
+    }
+}
+
+@keyframes textHoverGithub {
+    to {
+        width: 410px;
+    }
+}
+
+@keyframes textHoverGmail {
+    to {
+        width: 430px;
+    }
+}
+
+@keyframes unTextHoverInstagram {
+    from {
+        width: 200px;
+        border-bottom: 3px solid white;
+    }
+
+    to {
+        border-bottom: 3px solid white;
+        width: 0;
+    }
+}
+
+@keyframes unTextHoverGithub {
+    from {
+        width: 410px;
+        border-bottom: 3px solid white;
+    }
+
+    to {
+        border-bottom: 3px solid white;
+        width: 0;
+    }
+}
+
+@keyframes unTextHoverGmail {
+    from {
+        width: 430px;
+        border-bottom: 3px solid white;
+    }
+
+    to {
+        border-bottom: 3px solid white;
+        width: 0;
+    }
+}
+
+.contact-wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    .contact-description-wrap {
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            font-family: 'Noto Sans' sans-serif;
+        }
+
+        .contact-title {
+            font-size: 148px;
+            font-weight: 800;
+            margin-top: 10vh;
+        }
+
+        .contact {
+            width: 0px;
+            font-size: 36px;
+            font-weight: 700;
+            margin: 8px 0 8px 0;
+            padding: 0 0 4px 0;
+            border-bottom: 3px solid black;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            &:hover {
+                border-bottom: 3px solid white;
+            }
+        }
+
+        .instagram {
+            @include singleAnimation(1, unTextHoverInstagram, 0s, 1s);
+
+            &:hover {
+                @include singleAnimation(1, textHoverInstagram, 0s, 0.8s);
+            }
+        }
+
+        .github {
+            @include singleAnimation(1, unTextHoverGithub, 0s, 1s);
+
+            &:hover {
+                @include singleAnimation(1, textHoverGithub, 0s, 0.8s);
+            }
+        }
+
+        .gmail {
+            @include singleAnimation(1, unTextHoverGmail, 0s, 1s);
+
+            &:hover {
+                @include singleAnimation(1, textHoverGmail, 0s, 0.8s);
+            }
+        }
+
+        .contact-description {
+            margin-top: auto;
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+}
