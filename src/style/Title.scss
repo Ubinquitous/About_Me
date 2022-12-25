@@ -1,0 +1,37 @@
+@import './Animation.scss';
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.title-wrap {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        font-family: 'RocGrotesk-wide', sans-serif;
+
+        &::selection {
+            background-color: transparent;
+        }
+    }
+
+    .title {
+        font-size: 86px;
+    }
+
+    .sub-title {
+        margin-top: 22px;
+        font-size: 20px;
+        opacity: 0;
+        @include singleAnimation(0, fadeIn, 2s, 1.6s);
+    }
+}
