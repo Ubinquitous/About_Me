@@ -1,11 +1,11 @@
 import React from 'react';
 
-const red = () => {
+const Museum = () => {
     return (
         <div style={{ color: 'white' }}>
-            red
+            museum
         </div>
     );
 };
 
-export default red;
+export default Museum;
