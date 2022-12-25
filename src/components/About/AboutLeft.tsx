@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style/About.scss';
+import '@/style/About.scss';
 
 const AboutLeft = () => {
     return (
