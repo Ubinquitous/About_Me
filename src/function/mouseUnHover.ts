@@ -1,10 +1,14 @@
 import { changeImg } from "./changeImg";
 
 export const mouseUnHover = (e: any, num: string, src: string) => {
-    changeImg(e, src)
-    const card = document.querySelector(`.c${num}`) as any
-    card.classList.add('ff');
+    changeImg(e, num, src)
+    const card = document.querySelector(`.c${num}`) || null as any
+    if (card !== null) {
+        card.classList.add('ff');
+    }
     setTimeout(() => {
-        card.classList.remove('ff');
+        if (card !== null) {
+            card.classList.remove('ff');
+        }
     }, 300)
 }

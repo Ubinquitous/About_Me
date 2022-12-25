@@ -1,7 +1,7 @@
-export const changeImg = (e: any, src: string) => {
-    const card = document.querySelectorAll('.s') as any
-    for (let i = 0; i < 8; i++) {
-        card[i].classList.remove(`s${i + 1}`);
+export const changeImg = (e: any, num: string, src: string) => {
+    const card = document.querySelector(`.s${num}`) || null as any
+    if (card !== null) {
+        card.classList.remove(`s${num}`);
     }
     e.target.src = src;
 }
