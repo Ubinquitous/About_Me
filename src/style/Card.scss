@@ -1,0 +1,199 @@
+@import './Animation.scss';
+
+@keyframes cardHover {
+    to {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@keyframes notCardHover {
+    from {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 90%;
+        height: 90%;
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes cardFadeInLeft {
+    to {
+        right: 0;
+    }
+}
+
+@keyframes cardFadeInRight {
+    to {
+        left: 0;
+    }
+}
+
+@keyframes cardFadeInUp {
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes cardFadeInDown {
+    to {
+        top: 0;
+    }
+}
+
+@keyframes cardFadeOutLeft {
+    to {
+        top: 400px;
+    }
+}
+
+@keyframes cardFadeOutRight {
+    to {
+        bottom: 400px;
+    }
+}
+
+@keyframes cardFadeOutUp {
+    to {
+        left: 400px;
+    }
+}
+
+@keyframes cardFadeOutDown {
+    to {
+        right: 400px;
+    }
+}
+
+.card-box {
+    margin-left: auto;
+    margin-right: 8vw;
+
+    .cards {
+        display: flex;
+        margin: 10px 0 10px 0;
+
+        .card {
+            width: 14vw;
+            height: 44vh;
+            background-color: transparent;
+            margin: 0 5px 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    @include singleAnimation(1, cardHover, 0s, 0.3s);
+                }
+            }
+
+            .ff {
+                @include singleAnimation(1, notCardHover, 0s, 0.3s);
+            }
+
+            img {
+                width: 14vw;
+                height: 44vh;
+                position: relative;
+            }
+
+            .s1 {
+                top: 400px;
+                @include singleAnimation(1, cardFadeInDown, 0.4s, 0.7s);
+            }
+
+            .s2 {
+                right: 400px;
+                @include singleAnimation(1, cardFadeInLeft, 0.6s, 0.7s);
+            }
+
+            .s3 {
+                bottom: 400px;
+                @include singleAnimation(1, cardFadeInUp, 0.2s, 0.7s);
+            }
+
+            .s4 {
+                left: 400px;
+                @include singleAnimation(1, cardFadeInRight, 0.8s, 0.7s);
+            }
+
+            .s5 {
+                left: 400px;
+                @include singleAnimation(1, cardFadeInRight, 0.8s, 0.7s);
+            }
+
+            .s6 {
+                bottom: 400px;
+                @include singleAnimation(1, cardFadeInUp, 0.8s, 0.7s);
+            }
+
+            .s7 {
+                right: 400px;
+                @include singleAnimation(1, cardFadeInLeft, 0.2s, 0.7s);
+            }
+
+            .s8 {
+                bottom: 400px;
+                @include singleAnimation(1, cardFadeInUp, 0.6s, 0.7s);
+            }
+
+            .a1,
+            .a2,
+            .a3,
+            .a4,
+            .a5,
+            .a6,
+            .a7,
+            .a8 {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            .a1 {
+                @include singleAnimation(1, cardFadeOutUp, 0.2s, 0.7s);
+            }
+
+            .a2 {
+                @include singleAnimation(1, cardFadeOutLeft, 0.6s, 0.7s);
+            }
+
+            .a3 {
+                @include singleAnimation(1, cardFadeOutUp, 0.2s, 0.7s);
+            }
+
+            .a4 {
+                @include singleAnimation(1, cardFadeOutLeft, 0.8s, 0.7s);
+            }
+
+            .a5 {
+                @include singleAnimation(1, cardFadeOutUp, 0.8s, 0.7s);
+            }
+
+            .a6 {
+                @include singleAnimation(1, cardFadeOutLeft, 0.8s, 0.7s);
+            }
+
+            .a7 {
+                @include singleAnimation(1, cardFadeOutLeft, 0.2s, 0.7s);
+            }
+
+            .a8 {
+                @include singleAnimation(1, cardFadeOutUp, 0.6s, 0.7s);
+            }
+        }
+    }
+}
