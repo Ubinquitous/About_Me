@@ -1,0 +1,40 @@
+.about-wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    .about-title {
+        font-family: 'RocGrotesk-wide-bold', sans-serif;
+        font-size: 62px;
+        line-height: 76px;
+    }
+
+    .description {
+        margin-top: 20px;
+        font-family: 'RocGrotesk-basic', sans-serif;
+        font-size: 22px;
+    }
+
+    .main {
+        margin-right: auto;
+        margin-left: 10vw;
+    }
+
+    .about-span-box {
+        margin-left: auto;
+        margin-right: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .sub {
+            margin-right: auto;
+        }
+    }
+}
