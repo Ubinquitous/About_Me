@@ -1,5 +1,6 @@
 @import './Animation.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap');
 
 @font-face {
     font-family: RocGrotesk-wide;
@@ -36,11 +37,6 @@
 }
 
 @keyframes cardHover {
-    from {
-        width: 100%;
-        height: 100%;
-    }
-
     to {
         width: 90%;
         height: 90%;
@@ -49,6 +45,10 @@
 
 @keyframes notCardHover {
     from {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: 90%;
         height: 90%;
     }
@@ -56,6 +56,94 @@
     to {
         width: 100%;
         height: 100%;
+    }
+}
+
+@keyframes textClick {
+    to {
+        font-size: 200px;
+        color: white;
+    }
+}
+
+@keyframes textClick230 {
+    to {
+        font-size: 220px;
+        color: white;
+    }
+}
+
+@keyframes textUnClick {
+    from {
+        font-size: 200px;
+        color: white;
+    }
+
+    to {
+        font-size: 210px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: white;
+    }
+}
+
+@keyframes textUnClick230 {
+    from {
+        font-size: 220px;
+        color: white;
+    }
+
+    to {
+        font-size: 230px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: white;
+    }
+}
+
+@keyframes cardFadeInLeft {
+    to {
+        right: 0;
+    }
+}
+
+@keyframes cardFadeInRight {
+    to {
+        left: 0;
+    }
+}
+
+@keyframes cardFadeInUp {
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes cardFadeInDown {
+    to {
+        top: 0;
+    }
+}
+
+@keyframes cardFadeOutLeft {
+    to {
+        top: 400px;
+    }
+}
+
+@keyframes cardFadeOutRight {
+    to {
+        bottom: 400px;
+    }
+}
+
+@keyframes cardFadeOutUp {
+    to {
+        left: 400px;
+    }
+}
+
+@keyframes cardFadeOutDown {
+    to {
+        right: 400px;
     }
 }
 
@@ -204,27 +292,170 @@
         align-items: center;
         flex-direction: column;
 
-        .cards {
-            display: flex;
-            margin: 5px 0 5px 0;
+        .card-text {
+            font-weight: 800;
+            font-size: 210px;
+            color: transparent;
+            font-family: 'Noto Sans', sans-serif;
+            position: absolute;
+        }
 
-            .card {
-                width: 14vw;
-                height: 44vh;
-                background-color: transparent;
-                margin: 0 5px 0 5px;
+        .all {
+            @include singleAnimation(1, textUnClick, 0s, 0.4s);
+
+            margin-top: -30vw;
+            margin-right: 63vw;
+
+            &:hover {
+                @include singleAnimation(1, textClick, 0s, 0.4s);
+            }
+        }
+
+        .me {
+            @include singleAnimation(1, textUnClick, 0s, 0.4s);
+
+            margin-right: 70vw;
+            margin-top: -3vw;
+
+            &:hover {
+                @include singleAnimation(1, textClick, 0s, 0.4s);
+            }
+        }
+
+        .ex {
+            @include singleAnimation(1, textUnClick230, 0s, 0.4s);
+
+            font-size: 230px;
+            margin-top: 25vw;
+            margin-right: 72vw;
+
+            &:hover {
+                @include singleAnimation(1, textClick230, 0s, 0.4s);
+            }
+        }
+
+        .card-box {
+            margin-left: auto;
+            margin-right: 8vw;
+
+            .cards {
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                margin: 10px 0 10px 0;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-
-                    @include singleAnimation(1, notCardHover, 0s, 0.3s);
+                .card {
+                    width: 14vw;
+                    height: 44vh;
+                    background-color: transparent;
+                    margin: 0 5px 0 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
 
                     &:hover {
-                        @include singleAnimation(1, cardHover, 0s, 0.3s);
+                        img {
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            @include singleAnimation(1, cardHover, 0s, 0.3s);
+                        }
+                    }
+
+                    .ff {
+                        @include singleAnimation(1, notCardHover, 0s, 0.3s);
+                    }
+
+                    img {
+                        width: 14vw;
+                        height: 44vh;
+                        position: relative;
+                    }
+
+                    .s1 {
+                        top: 400px;
+                        @include singleAnimation(1, cardFadeInDown, 0.4s, 0.7s);
+                    }
+
+                    .s2 {
+                        right: 400px;
+                        @include singleAnimation(1, cardFadeInLeft, 0.6s, 0.7s);
+                    }
+
+                    .s3 {
+                        bottom: 400px;
+                        @include singleAnimation(1, cardFadeInUp, 0.2s, 0.7s);
+                    }
+
+                    .s4 {
+                        left: 400px;
+                        @include singleAnimation(1, cardFadeInRight, 0.8s, 0.7s);
+                    }
+
+                    .s5 {
+                        left: 400px;
+                        @include singleAnimation(1, cardFadeInRight, 0.8s, 0.7s);
+                    }
+
+                    .s6 {
+                        bottom: 400px;
+                        @include singleAnimation(1, cardFadeInUp, 0.8s, 0.7s);
+                    }
+
+                    .s7 {
+                        right: 400px;
+                        @include singleAnimation(1, cardFadeInLeft, 0.2s, 0.7s);
+                    }
+
+                    .s8 {
+                        bottom: 400px;
+                        @include singleAnimation(1, cardFadeInUp, 0.6s, 0.7s);
+                    }
+
+                    .a1,
+                    .a2,
+                    .a3,
+                    .a4,
+                    .a5,
+                    .a6,
+                    .a7,
+                    .a8 {
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                    .a1 {
+                        @include singleAnimation(1, cardFadeOutUp, 0.2s, 0.7s);
+                    }
+
+                    .a2 {
+                        @include singleAnimation(1, cardFadeOutLeft, 0.6s, 0.7s);
+                    }
+
+                    .a3 {
+                        @include singleAnimation(1, cardFadeOutUp, 0.2s, 0.7s);
+                    }
+
+                    .a4 {
+                        @include singleAnimation(1, cardFadeOutLeft, 0.8s, 0.7s);
+                    }
+
+                    .a5 {
+                        @include singleAnimation(1, cardFadeOutUp, 0.8s, 0.7s);
+                    }
+
+                    .a6 {
+                        @include singleAnimation(1, cardFadeOutLeft, 0.8s, 0.7s);
+                    }
+
+                    .a7 {
+                        @include singleAnimation(1, cardFadeOutLeft, 0.2s, 0.7s);
+                    }
+
+                    .a8 {
+                        @include singleAnimation(1, cardFadeOutUp, 0.6s, 0.7s);
                     }
                 }
             }
