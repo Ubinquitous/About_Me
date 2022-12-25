@@ -16,9 +16,9 @@ import renderSubBalls from '../function/renderSubBalls';
 import ContactMe from '../components/ContactMe';
 
 const Home = () => {
-    const mainboxRef = React.useRef(null);
+    const mainboxRef = React.useRef<HTMLDivElement>(null);
     const maincanvasRef = React.useRef(null);
-    const subboxRef = React.useRef(null);
+    const subboxRef = React.useRef<HTMLDivElement>(null);
     const subcanvasRef = React.useRef(null);
 
     const [isClickALL, setIsClickALL] = React.useState(true);

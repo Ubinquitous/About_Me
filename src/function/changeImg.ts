@@ -1,7 +1,9 @@
-export const changeImg = (e: any, num: string, src: string) => {
-    const card = document.querySelector(`.s${num}`) || null as any
+export const changeImg = (e: React.MouseEvent<HTMLImageElement>, num: string, src: string) => {
+    const card = document.querySelector(`.s${num}`) || null
     if (card !== null) {
         card.classList.remove(`s${num}`);
     }
-    e.target.src = src;
+    if (e.target instanceof HTMLImageElement) {
+        e.target.src = src;
+    }
 }

@@ -1,8 +1,8 @@
 import { changeImg } from "./changeImg";
 
-export const mouseUnHover = (e: any, num: string, src: string) => {
+export const mouseUnHover = (e: React.MouseEvent<HTMLImageElement>, num: string, src: string) => {
     changeImg(e, num, src)
-    const card = document.querySelector(`.c${num}`) || null as any
+    const card = document.querySelector(`.c${num}`) || null
     if (card !== null) {
         card.classList.add('ff');
     }

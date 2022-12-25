@@ -1,6 +1,7 @@
 import Matter, { Constraint, Mouse, MouseConstraint } from "matter-js";
+import { RefObject } from "react";
 
-const renderMainBalls = (mainboxRef: any, maincanvasRef: any) => {
+const renderMainBalls = (mainboxRef: RefObject<HTMLDivElement>, maincanvasRef: RefObject<HTMLDivElement>) => {
     const WIDTH = 600;
     const HEIGHT = 600;
     let Engine = Matter.Engine;
@@ -11,9 +12,9 @@ const renderMainBalls = (mainboxRef: any, maincanvasRef: any) => {
     let engine = Engine.create({});
 
     let render = Render.create({
-        element: mainboxRef.current as any,
+        element: mainboxRef.current as HTMLElement,
         engine: engine,
-        canvas: maincanvasRef.current as any,
+        canvas: maincanvasRef.current as unknown as HTMLCanvasElement,
         options: {
             width: WIDTH,
             height: HEIGHT,
