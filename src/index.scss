@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap');
+
+@font-face {
+  font-family: RocGrotesk-wide;
+  src: url('./fonts/Fontspring-DEMO-rocgroteskwide-regular.otf');
+}
+
+@font-face {
+  font-family: RocGrotesk-basic;
+  src: url('./fonts/Fontspring-DEMO-rocgrotesk-regular.otf');
+}
+
+@font-face {
+  font-family: RocGrotesk-wide-bold;
+  src: url('./fonts/Fontspring-DEMO-rocgroteskwide-bold.otf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

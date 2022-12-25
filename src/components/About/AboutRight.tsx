@@ -8,7 +8,7 @@ const AboutRight = () => {
                     data-aos='fade-left'
                     data-aos-offset='100'
                     data-aos-duration='1300'
-                >TEXT<br />TEXT TEXT</span>
+                >My<br />Vision is</span>
                 <span className='description sub'
                     data-aos='fade-left'
                     data-aos-offset='120'
