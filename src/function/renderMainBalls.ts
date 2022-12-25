@@ -1,4 +1,4 @@
-import Matter, { Constraint } from "matter-js";
+import Matter, { Constraint, Mouse, MouseConstraint } from "matter-js";
 
 const renderMainBalls = (mainboxRef: any, maincanvasRef: any) => {
     const WIDTH = 600;
@@ -89,7 +89,15 @@ const renderMainBalls = (mainboxRef: any, maincanvasRef: any) => {
         render: { strokeStyle: 'transparent', lineWidth: 0, }
     })
 
-    World.add(engine.world, [ball1, ball2, ball3, ball4, rope1, rope2, rope3, rope4]);
+    const mouse = Mouse.create(render.canvas);
+    const mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+            render: { visible: false }
+        }
+    });
+
+    World.add(engine.world, [ball1, ball2, ball3, ball4, rope1, rope2, rope3, rope4, mouseConstraint]);
 
     Engine.run(engine);
     Render.run(render);
