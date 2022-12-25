@@ -1,0 +1,54 @@
+.circle-wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    .circle-title {
+        font-family: 'RocGrotesk-wide-bold';
+        font-size: 62px;
+        position: absolute;
+        right: 60vw;
+        margin-top: -30vw;
+        line-height: 76px;
+        z-index: 2;
+    }
+
+    .circle {
+        display: flex;
+        width: fit-content;
+        height: 40vw;
+
+        .main-circle {
+            width: 40vw;
+            height: 40vw;
+            border-radius: 20vw;
+            position: absolute;
+            background: none 0% 0% / contain;
+            isolation: isolate;
+        }
+
+        .sub-circle {
+            width: 30vw;
+            height: 30vw;
+            border-radius: 999px;
+            margin-left: 35vw;
+            z-index: 1;
+            background-color: black;
+        }
+    }
+
+    .circle-subtitle {
+        text-align: right;
+        font-family: 'RocGrotesk-wide-bold';
+        font-size: 62px;
+        line-height: 76px;
+        position: absolute;
+        left: 70vw;
+        margin-top: 28vw;
+    }
+}
