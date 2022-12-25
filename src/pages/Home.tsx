@@ -125,7 +125,7 @@ const Home = () => {
         }
     }
 
-    if (scrollY >= 1410 && !isUsedRenderBallFuncion) {
+    if (scrollY >= 710 && !isUsedRenderBallFuncion) {
         renderSubBalls(subboxRef, subcanvasRef);
         renderMainBalls(mainboxRef, maincanvasRef);
         setIsUsedRenderBallFuncion(true)
@@ -156,7 +156,6 @@ const Home = () => {
                     <div className='home-wrap'>
                         <Title />
                         <AboutLeft />
-                        <AboutRight />
                         <div className='circle-wrap item'>
                             <span className='circle-title'>TECH SKILL</span>
                             <div className='circle'>
@@ -169,6 +168,7 @@ const Home = () => {
                             </div>
                             <span className='circle-subtitle'>SUB<br />TECHS</span>
                         </div>
+                        <AboutRight />
                         <div className='card-wrap item'>
                             <span className='card-text all'
                                 onClick={onClickALL}

@@ -12,9 +12,9 @@ const Header = () => {
         <div className='header-wrap'>
             <span className='header-title' onClick={reRender}>Park Ubin</span>
             <div className='navigation-wrap'>
-                <span className='navigation-title' onClick={() => { MoveTo(704) }}>I Find</span>
-                <span className='navigation-title' onClick={() => { MoveTo(1408) }}>My vision</span>
-                <span className='navigation-title' onClick={() => { MoveTo(2112) }}>Tech</span>
+                <span className='navigation-title' onClick={() => { MoveTo(704) }}>I am</span>
+                <span className='navigation-title' onClick={() => { MoveTo(1408) }}>Tech</span>
+                <span className='navigation-title' onClick={() => { MoveTo(2112) }}>My Interest</span>
                 <span className='navigation-title' onClick={() => { MoveTo(2816) }}>About</span>
             </div>
         </div>
