@@ -44,13 +44,13 @@ const Home = () => {
     const onClickALL = () => {
         if (!isClickALL) {
             setIsPrevent(true);
-            const card = document.querySelectorAll('.s') as any
+            const card = document.querySelectorAll('.s')
             for (let i = 0; i < 8; i++) {
                 card[i].classList.add(`a${i + 1}`);
             }
-            const AL = document.querySelector('.all') as any
-            const ME = document.querySelector('.me') as any
-            const EX = document.querySelector('.ex') as any
+            const AL = document.querySelector('.all') as HTMLElement
+            const ME = document.querySelector('.me') as HTMLElement
+            const EX = document.querySelector('.ex') as HTMLElement
             AL.style.color = 'white'
             ME.style.color = 'transparent'
             EX.style.color = 'transparent'
@@ -72,13 +72,13 @@ const Home = () => {
     const onClickME = () => {
         if (!isClickME) {
             setIsPrevent(true);
-            const card = document.querySelectorAll('.s') as any
+            const card = document.querySelectorAll('.s')
             for (let i = 0; i < 8; i++) {
                 card[i].classList.add(`a${i + 1}`);
             }
-            const AL = document.querySelector('.all') as any
-            const ME = document.querySelector('.me') as any
-            const EX = document.querySelector('.ex') as any
+            const AL = document.querySelector('.all') as HTMLElement
+            const ME = document.querySelector('.me') as HTMLElement
+            const EX = document.querySelector('.ex') as HTMLElement
             AL.style.color = 'transparent'
             ME.style.color = 'white'
             EX.style.color = 'transparent'
@@ -100,13 +100,13 @@ const Home = () => {
     const onClickEX = () => {
         if (!isClickEX) {
             setIsPrevent(true);
-            const card = document.querySelectorAll('.s') as any
+            const card = document.querySelectorAll('.s')
             for (let i = 0; i < 8; i++) {
                 card[i].classList.add(`a${i + 1}`);
             }
-            const AL = document.querySelector('.all') as any
-            const ME = document.querySelector('.me') as any
-            const EX = document.querySelector('.ex') as any
+            const AL = document.querySelector('.all') as HTMLElement
+            const ME = document.querySelector('.me') as HTMLElement
+            const EX = document.querySelector('.ex') as HTMLElement
             AL.style.color = 'transparent'
             ME.style.color = 'transparent'
             EX.style.color = 'white'

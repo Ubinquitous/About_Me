@@ -53,6 +53,13 @@
     }
 }
 
+@keyframes fadeIn {
+    to {
+        color: black;
+        right: 3000px;
+    }
+}
+
 .wrap {
     height: 100vh;
 }
@@ -120,6 +127,11 @@
             &:hover {
                 @include singleAnimation(1, textClick230, 0s, 0.4s);
             }
+        }
+
+        .w {
+            position: absolute;
+            @include singleAnimation(1, fadeIn, 0s, 0.4s);
         }
     }
 }
